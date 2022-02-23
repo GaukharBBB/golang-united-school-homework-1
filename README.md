@@ -1,15 +1,53 @@
-# Golang united school - part 1
+# Emoji
+Emoji is a simple golang package.
 
-Inside of this repository you can find all homeworks for the first part of the [Golang united school](https://community-z.com/communities/golang/golang-united-school)
+[![wercker status](https://app.wercker.com/status/7bef60de2c6d3e0e6c13d56b2393c5d8/s/master "wercker status")](https://app.wercker.com/project/byKey/7bef60de2c6d3e0e6c13d56b2393c5d8)
+[![Coverage Status](https://coveralls.io/repos/kyokomi/emoji/badge.png?branch=master)](https://coveralls.io/r/kyokomi/emoji?branch=master)
+[![GoDoc](https://pkg.go.dev/badge/github.com/kyokomi/emoji.svg)](https://pkg.go.dev/github.com/kyokomi/emoji/v2)
 
-Practical assigment destributed acroos the branches `lecture-*`
+Get it:
 
-We use platform [Autocode](https://autocode-next.lab.epam.com) to track the homework, please use it to complete tasks.
+```
+go get github.com/kyokomi/emoji/v2
+```
 
-## How to use `Autocode`?
-To use autocode you must be registered on the platform (please specify your real name).
-After registration, please authorize the platform to use your `github` account, platform will automatically fork the repo to your account when you start task.
+Import it:
 
-You might code in any IDEA or TextEditor for the development, to sumbit the code you just need to commit it to the specific branch, after that you will have an ability to submit code on the platform and get all test results.
+```
+import (
+	"github.com/kyokomi/emoji/v2"
+)
+```
 
-Good Luck!
+## Usage
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/kyokomi/emoji/v2"
+)
+
+func main() {
+	fmt.Println("Hello World Emoji!")
+
+	emoji.Println(":beer: Beer!!!")
+
+	pizzaMessage := emoji.Sprint("I like a :pizza: and :sushi:!!")
+	fmt.Println(pizzaMessage)
+}
+```
+
+## Demo
+
+![demo](screen/image.png)
+
+## Reference
+
+- [unicode Emoji Charts](http://www.unicode.org/emoji/charts/emoji-list.html)
+
+## License
+
+[MIT](https://github.com/kyokomi/emoji/blob/master/LICENSE)
